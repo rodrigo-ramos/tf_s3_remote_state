@@ -1,2 +1,5 @@
 .terraform/
-terraform.tfvars
+*.tfvars
+*.tfstate
+*.backup
+*.lock.*
