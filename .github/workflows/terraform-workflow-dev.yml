@@ -1,10 +1,10 @@
 name: Terraform Deploy on Development
 
 on:
-  push:
+  pull_request:
     branches:
       - development
-
+env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,4 +23,4 @@ jobs:
       - name: Terraform Apply
         run: terraform apply tfplan
         env:
-          TF_CLI_ARGS: "-auto-approve"
+          TF_CLI_ARGS: "-auto-approve -var-file="terraform-dev.tfvars""
