@@ -1,4 +1,4 @@
-name: Terraform Deploy on Development
+name: Terraform Deploy on Production
 
 on:
   pull_request:
