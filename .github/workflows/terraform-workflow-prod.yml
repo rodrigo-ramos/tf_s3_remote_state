@@ -1,4 +1,4 @@
-name: Terraform Deploy on Development
+name: Terraform Deploy on Production
 
 on:
   pull_request:
@@ -8,6 +8,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Print current git branch
+        run: echo $GITHUB_REF
+        
       - uses: actions/checkout@v2
 
       - name: Configure AWS credentials
