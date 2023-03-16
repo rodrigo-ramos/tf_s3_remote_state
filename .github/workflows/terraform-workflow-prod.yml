@@ -7,10 +7,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Print current git branch
-        run: echo $GITHUB_REF
-        
+    steps:   
       - uses: actions/checkout@v2
 
       - name: Configure AWS credentials
