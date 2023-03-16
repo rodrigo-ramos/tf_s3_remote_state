@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print current git branch
-        run: $(echo $GITHUB_REF | sed 's/refs\/heads\///')
+        run: echo $GITHUB_REF
       
       - uses: actions/checkout@v2
 
