@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Print current git branch
         run: echo $GITHUB_REF
+        
       - uses: actions/checkout@v2
 
       - name: Configure AWS credentials
